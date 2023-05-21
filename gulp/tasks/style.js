@@ -17,24 +17,13 @@ export const style = () => {
         }),
       )
 
-      // ! Automatically substitutes webp file (if need) + activate js function
-      .pipe(
-        app.plugins.if(
-          app.isBuild,
-          webpcss({
-            webpClass: '.webp',
-            noWebpClass: '.no-webp',
-          })
-        )
-      )
-
       .pipe(app.plugins.if(app.isBuild, groupCssMediaQueries()))
       .pipe(
         app.plugins.if(
           app.isBuild,
           autoPrefixer({
             grid: true,
-            overrideBrowserslist: ["last 3 versions"],
+            overrideBrowserslist: ["last 2 versions"],
             cascade: true,
           }),
         ),

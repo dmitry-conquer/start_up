@@ -1,4 +1,4 @@
-import { isMobile } from "../modules/functions.js";
+import { isMobile } from "../lib/functions.js";
 
 export function initHeader() {
   const header = document.querySelector(".header");
@@ -48,7 +48,7 @@ export function initHeader() {
 
 
     // close menu on Escape
-    header.addEventListener("keydown", function (e) {
+    header.addEventListener("keydown", function () {
       if (event.key === "Escape") {
         if (headerMenu.classList.contains("_active-menu-header")) {
           toggleMenu();

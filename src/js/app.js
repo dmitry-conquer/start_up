@@ -1,8 +1,8 @@
 "use strict";
 // > - - - - - - - - [Import] - - - - - - - - - - - - -- - - - - - - - - - - - - - - - - - - - - - -
-import { consoleInfo, isWebp } from "./lib/functions.js";
+import { consoleInfo } from "./lib/functions.js";
 import { useDynamicAdapt } from "./lib/dynamicAdapt.js";
-import { initHeader } from "./lib/header.js";
+import { initHeader } from "./components/header.js";
 import { initSliders } from "./lib/slider.js";
 import { hasErrors } from "./lib/forms.js";
 // > - - - - - - - - [app development] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -13,7 +13,6 @@ function app() {
    consoleInfo();
    initHeader();
    useDynamicAdapt("max");
-   isWebp();
    initSliders();
 
    // forms validation
@@ -22,9 +21,9 @@ function app() {
       e.preventDefault();
       if (hasErrors(connetForm) > 0) {
          alert("Перевірте дані");
-         connetForm.reset();
       } else {
          alert("Відправлено!");
+         connetForm.reset();
       }
    });
    // - - - - - - - [app {END}] - - - - - - - - - - - - - - - - - - - - - - - - - - - -
