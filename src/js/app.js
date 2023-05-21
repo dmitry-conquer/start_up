@@ -2,9 +2,10 @@
 // > - - - - - - - - [Import] - - - - - - - - - - - - -- - - - - - - - - - - - - - - - - - - - - - -
 import { consoleInfo } from "./lib/functions.js";
 import { useDynamicAdapt } from "./lib/dynamicAdapt.js";
-import { initHeader } from "./components/header.js";
-import { initSliders } from "./lib/slider.js";
 import { hasErrors } from "./lib/forms.js";
+
+import { initHeader } from "./components/header.js";
+import { initSliders } from "./components/sliders.js";
 // > - - - - - - - - [app development] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 document.addEventListener("DOMContentLoaded", app);
 
@@ -14,7 +15,7 @@ function app() {
    initHeader();
    useDynamicAdapt("max");
    initSliders();
-
+  
    // forms validation
    const connetForm = document.querySelector(".form-connect__body");
    connetForm.addEventListener("submit", e => {

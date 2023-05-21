@@ -86,7 +86,7 @@ export function initSliders() {
    }
 
    if (document.querySelector(".slider-clients")) {
-      const clienstSlider = new Swiper(".slider-clients", {
+      new Swiper(".slider-clients", {
          modules: [Autoplay],
          wrapperClass: "slider-clients__wrapper",
          slideClass: "slider-clients__slide",
@@ -115,7 +115,7 @@ export function initSliders() {
    }
 
    if (document.querySelector(".slider-connect")) {
-      const connectSlider = new Swiper(".slider-connect", {
+      new Swiper(".slider-connect", {
          modules: [Autoplay, Pagination],
          wrapperClass: "slider-connect__wrapper",
          slideClass: "slider-connect__slide",

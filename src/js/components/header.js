@@ -36,7 +36,6 @@ export function initHeader() {
           triggerSubmenu.classList.remove("_active-trigger-sublist");
         }
       } else if (window.innerWidth < 992 && isMobile.any()) {
-        console.log("< 992");
         const dropDownMenu = triggerSubmenu.querySelector(".item-header__dd");
         if (e.target.closest("._open-sublist")) {
           dropDownMenu.style.maxHeight = dropDownMenu.style.maxHeight ? null : `${dropDownMenu.scrollHeight}px`;
