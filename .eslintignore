@@ -1,0 +1,5 @@
+/dist/js/app.min.js
+/src/js/components/
+/src/js/modules/
+/node_modules/
+/gulp/

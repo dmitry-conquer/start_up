@@ -1,0 +1,42 @@
+.icon-simple-arrow {
+  width: 16px;
+  height: 12px;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1px;
+  transition: all 0.3s ease;
+}
+.icon-phone {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+  stroke: none;
+  transition: all 0.3s ease;
+  &_footer {
+    fill: #4f5969;
+  }
+}
+.icon-location {
+  width: 24px;
+  height: 24px;
+  fill: #4f5969;
+  stroke: none;
+  transition: all 0.3s ease;
+}
+
+.icon-twitter,
+.icon-facebook,
+.icon-instargram {
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+  stroke: none;
+  transition: all 0.3s ease;
+}
+
+.icon-apple, .icon-google, .icon-intel, .icon-air-bnb {
+  fill: #fff;
+  stroke: none;
+  width: 30px;
+  height: 30px;
+}

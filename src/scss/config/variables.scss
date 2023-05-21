@@ -1,0 +1,16 @@
+$container-layout-width: 1120; // Ширина контейнера по макету
+$container-padding: 15; // Отступы у контейнера (по 15px слева и справа, 0 = нет отступа)
+
+$container-max-width: calc($container-layout-width + ($container-padding * 2));
+
+// header-height
+$xl-header: 90px;
+$lg-header: 70px;
+$md-header: 50px;
+$sm-header: 45px;
+
+//break-points
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;

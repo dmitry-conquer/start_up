@@ -1,0 +1,85 @@
+html {
+  scroll-behavior: smooth;
+  // scroll-padding-top: 30px;
+}
+
+// > === General styles ===
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+
+  &._lock {
+    overflow: hidden;
+    touch-action: none;
+  }
+}
+
+// > === Wrapper ===
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 100%;
+
+  main {
+    flex: 1 1 auto;
+  }
+}
+
+// > === Main container styles ===
+[class*="__container"] {
+  margin: 0 auto;
+  padding: 0 $container-padding + px;
+  max-width: $container-max-width + px;
+}
+
+// > === One side container ===
+.left-container {
+  margin: 0;
+  padding: 0 0 0 calc((100% - ($container-max-width * 1px)) / 2 + $container-padding * 1px);
+  max-width: none;
+}
+
+.right-container {
+  margin: 0;
+  padding: 0 calc((100% - ($container-max-width * 1px)) / 2 + $container-padding * 1px) 0 0;
+  max-width: none;
+}
+
+// > === Responsive images ===
+._imw {
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}
+
+// >> - - - - - - - - - - - - - [current project global styles] - - - - - - - - - - - - - - - - -
+
+// - - - - - - - [headlines] - - - - - - - - - - - - - - - - - - - - - - - - - - -
+h1 {
+  font-weight: 600;
+  @include av("font-size", 56, 32);
+  line-height: lh(56, 56);
+}
+h2 {
+  font-weight: 600;
+  @include av('font-size', 32, 28);
+  line-height: lh(40, 32);
+}
+
+//
+.main-text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: lh(24, 14);
+  color: #afafaf;
+}

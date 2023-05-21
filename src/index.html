@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="uk">
+   @@include("components/head.html", { "title": "Porat - Головна" })
+
+   <body>
+      <div class="wrapper">
+         @@include("components/header.html", { })
+         <main>
+            <section class="hero">
+               <div class="hero__container">
+                  <div class="hero__inner">
+                     <div class="hero__titles">
+                        <h1 class="hero__title">Лідерство в інноваціях - наша головна мета!</h1>
+                        <p class="hero__text">
+                           Ми ставимо собі за мету бути впереду, диктувати нові тренди і змінювати гру правил в
+                           індустрії стартапів. Наша компанія прагне стати прикладом успішного інноваційного
+                           підприємства, що здатне перетворювати ідеї в реальність.
+                        </p>
+                     </div>
+                     <div class="hero__slider slider-hero">
+                        <div class="slider-hero__wrapper">
+                           <div class="slider-hero__slide slide-hero">
+                              <div class="slide-hero__title-wrap">
+                                 <svg class="icon-apple">
+                                    <use href="./sprites/sprite.svg#icon-apple"></use>
+                                 </svg>
+                                 <h2 class="slide-hero__title">Apple</h2>
+                              </div>
+                              <p class="slide-hero__text">Вибір Apple. Довіряйте інноваціям разом з нами.</p>
+                           </div>
+                           <div class="slider-hero__slide slide-hero">
+                              <div class="slide-hero__title-wrap">
+                                 <svg class="icon-google">
+                                    <use href="./sprites/sprite.svg#icon-google"></use>
+                                 </svg>
+                                 <h2 class="slide-hero__title">Google</h2>
+                              </div>
+                              <p class="slide-hero__text">Google впевнений у нас. Стартапи - наша сила.</p>
+                           </div>
+                           <div class="slider-hero__slide slide-hero">
+                              <div class="slide-hero__title-wrap">
+                                 <svg class="icon-intel">
+                                    <use href="./sprites/sprite.svg#icon-intel"></use>
+                                 </svg>
+                                 <h2 class="slide-hero__title">Intel</h2>
+                              </div>
+                              <p class="slide-hero__text">Intel обирає нас для майбутнього. Зростайте з нами.</p>
+                           </div>
+                           <div class="slider-hero__slide slide-hero">
+                              <div class="slide-hero__title-wrap">
+                                 <svg class="icon-air-bnb">
+                                    <use href="./sprites/sprite.svg#icon-air-bnb"></use>
+                                 </svg>
+                                 <h2 class="slide-hero__title">Intel</h2>
+                              </div>
+                              <p class="slide-hero__text">
+                                 Airbnb довіряє нам свою мережу. Перетворимо ідеї у реальність.
+                              </p>
+                           </div>
+                           <div class="slider-hero__slide slide-hero">
+                              <div class="slide-hero__title-wrap">
+                                 <svg class="icon-air-bnb">
+                                    <use href="./sprites/sprite.svg#icon-air-bnb"></use>
+                                 </svg>
+                                 <h2 class="slide-hero__title">Intel</h2>
+                              </div>
+                              <p class="slide-hero__text">
+                                 Airbnb довіряє нам свою мережу. Перетворимо ідеї у реальність.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <div class="general">
+               <section class="general__work work">
+                  <div class="work__container">
+                     <h2 class="work__title">Як ми працюємо</h2>
+                     <p class="work__text main-text">
+                        Наша компанія стоїть на передовому фронті інноваційного руху. Ми не тільки перетворюємо ідеї в
+                        реальність, але й визначаємо нові тренди і стандарти в сфері стартапів. Наша команда талановитих
+                        фахівців впроваджує передові технології та відкриває нові можливості для успіху наших клієнтів.
+                     </p>
+                  </div>
+               </section>
+               <section class="general__quize quize">
+                  <div class="quize__container">
+                     <div class="quize__inner">
+                        <div class="quize__left">
+                           <h2 class="quize__title">Пройдіть невелике опитування</h2>
+                           <p class="quize__text main-text">
+                              Ми намагаємось завжди ставати краще, допоможіть нам в цьому.
+                           </p>
+                           <div class="quize__number number-quize" data-da=".app-quize,768,last">
+                              <span class="number-quize__current">1</span> з
+                              <span class="number-quize__total">-</span>
+                           </div>
+                        </div>
+                        <div class="quize__app app-quize">
+                           <h3 class="app-quize__title">Оберіть відповідь</h3>
+                           <form action="#" class="app-quize__body">
+                              <div class="app-quize__wrapper">
+                                 <div class="app-quize__block">
+                                    <h4 class="app-quize__question main-text">Хто Ви?</h4>
+                                    <div class="app-quize__answers">
+                                       <label class="app-quize__answer">
+                                          <input
+                                             type="radio"
+                                             class="visually-hidden"
+                                             name="quize-who"
+                                             value="student"
+                                             checked />
+                                          <span>Я студент</span>
+                                       </label>
+                                       <label class="app-quize__answer">
+                                          <input type="radio" class="visually-hidden" name="quize-who" value="accept" />
+                                          <span>Я підприємець</span>
+                                       </label>
+                                       <label class="app-quize__answer">
+                                          <input type="radio" class="visually-hidden" name="quize-who" value="hire" />
+                                          <span>Я працюю по найму</span>
+                                       </label>
+                                       <label class="app-quize__answer">
+                                          <input
+                                             type="radio"
+                                             class="visually-hidden"
+                                             name="quize-who"
+                                             value="no-work" />
+                                          <span>Не працюю</span>
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <div class="app-quize__block">
+                                    <h4 class="app-quize__question main-text">
+                                       Які основні мотивації, що підштовхнули вас до розгляду можливості створення
+                                       власного стартапу?
+                                    </h4>
+                                    <div class="app-quize__answers">
+                                       <label class="app-quize__answer">
+                                          <input
+                                             type="radio"
+                                             class="visually-hidden"
+                                             name="quize-motivation"
+                                             value="idea" />
+                                          <span>Наявність ідеї</span>
+                                       </label>
+                                       <label class="app-quize__answer">
+                                          <input
+                                             type="radio"
+                                             class="visually-hidden"
+                                             name="quize-motivation"
+                                             value="money" />
+                                          <span>Гроші</span>
+                                       </label>
+                                       <label class="app-quize__answer">
+                                          <input
+                                             type="radio"
+                                             class="visually-hidden"
+                                             name="quize-motivation"
+                                             value="ego" />
+                                          <span>Самовираження</span>
+                                       </label>
+                                       <label class="app-quize__answer">
+                                          <input
+                                             type="radio"
+                                             class="visually-hidden"
+                                             name="quize-motivation"
+                                             value="injection" />
+                                          <span>Вплив на галузь</span>
+                                       </label>
+                                       <label class="app-quize__answer">
+                                          <input
+                                             type="radio"
+                                             class="visually-hidden"
+                                             name="quize-motivation"
+                                             value="solving" />
+                                          <span>Вирішення проблем</span>
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <div class="app-quize__block">
+                                    <h4 class="app-quize__question main-text">
+                                       Які переваги ви бачите у запуску власного стартапу порівняно з роботою в
+                                       корпоративному середовищі чи інших формах підприємницької діяльності?
+                                    </h4>
+                                    <div class="app-quize__answers">
+                                       <label class="app-quize__answer">
+                                          <input
+                                             type="radio"
+                                             class="visually-hidden"
+                                             name="quize-adventages"
+                                             value="freedom" />
+                                          <span>Свобода</span>
+                                       </label>
+                                       <label class="app-quize__answer">
+                                          <input
+                                             type="radio"
+                                             class="visually-hidden"
+                                             name="quize-adventages"
+                                             value="progress" />
+                                          <span>Розвиток</span>
+                                       </label>
+                                       <label class="app-quize__answer">
+                                          <input
+                                             type="radio"
+                                             class="visually-hidden"
+                                             name="quize-adventages"
+                                             value="hunchiness" />
+                                          <span>Гнучкість</span>
+                                       </label>
+                                       <label class="app-quize__answer">
+                                          <input
+                                             type="radio"
+                                             class="visually-hidden"
+                                             name="quize-adventages"
+                                             value="momey-potencial" />
+                                          <span>Потенціал прибутку</span>
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <div class="app-quize__block app-quize__block_end">
+                                    <button class="app-quize__send" type="submit">Надіслати відповіді</button>
+                                 </div>
+                              </div>
+                              <div class="app-quize__navigation">
+                                 <button class="app-quize__prev" type="button" aria-label="Попереднє питання">
+                                    <svg class="icon-simple-arrow">
+                                       <use href="./sprites/sprite.svg#icon-simple-arrow"></use>
+                                    </svg>
+                                 </button>
+                                 <button class="app-quize__next" type="button" aria-label="Наступне питання">
+                                    <svg class="icon-simple-arrow">
+                                       <use href="./sprites/sprite.svg#icon-simple-arrow"></use>
+                                    </svg>
+                                 </button>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <section class="general__advanteges advanteges">
+                  <div class="advanteges__container">
+                     <div class="advanteges__titles">
+                        <h2 class="advanteges__title">Чому саме ми?</h2>
+                        <p class="advanteges__text main-text">
+                           Ми віримо у силу і потенціал стартапів. Наша компанія має чітку стратегію та великий досвід,
+                           який дозволяє нам передбачати та адаптуватися до змін. Ми прагнемо створити довгострокові
+                           партнерства зі стартапами
+                        </p>
+                     </div>
+                     <ul class="advanteges__list">
+                        <li class="advanteges__item item-advanteges">
+                           <img
+                              class="item-advanteges__image"
+                              src="./img/content/main/advanteges/img1.svg"
+                              alt="image" />
+                           <h3 class="item-advanteges__title">Підтримка стартапів</h3>
+                           <p class="item-advanteges__text main-text">
+                              Ми знаємо, що стартапи є джерелом інновацій та економічного зростання.
+                           </p>
+                        </li>
+                        <li class="advanteges__item item-advanteges">
+                           <img
+                              class="item-advanteges__image"
+                              src="./img/content/main/advanteges/img2.svg"
+                              alt="image" />
+                           <h3 class="item-advanteges__title">Прогресивність</h3>
+                           <p class="item-advanteges__text main-text">
+                              У нашій компанії інновації - це не просто слово, а стиль життя. Ми завжди досліджуємо нові
+                              технології, вдосконалюємо наші процеси та стратегії.
+                           </p>
+                        </li>
+                        <li class="advanteges__item item-advanteges">
+                           <img
+                              class="item-advanteges__image"
+                              src="./img/content/main/advanteges/img3.svg"
+                              alt="image" />
+                           <h3 class="item-advanteges__title">Впевненість у майбутньому</h3>
+                           <p class="item-advanteges__text main-text">
+                              Ми віримо у силу і потенціал стартапів. Наша компанія має чітку стратегію та великий
+                              досвід, який дозволяє нам передбачати та адаптуватися до змін.
+                           </p>
+                        </li>
+                        <li class="advanteges__item item-advanteges">
+                           <img
+                              class="item-advanteges__image"
+                              src="./img/content/main/advanteges/img2.svg"
+                              alt="image" />
+                           <h3 class="item-advanteges__title">Прогресивність</h3>
+                           <p class="item-advanteges__text main-text">
+                              У нашій компанії інновації - це не просто слово, а стиль життя. Ми завжди досліджуємо нові
+                              технології, вдосконалюємо наші процеси та стратегії.
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+               </section>
+               <section class="general__clients clients">
+                  <div class="clients__container">
+                     <h2 class="clients__title">Наші клієнти</h2>
+                     <div class="clients__slider slider-clients">
+                        <div class="slider-clients__wrapper">
+                           <div class="slider-clients__slide slide-clients">
+                              <picture>
+                                 <source srcset="./img/content/main/clients/img1.webp" type="image/webp" />
+                                 <img
+                                    class="slide-clients__image"
+                                    src="./img/content/main/clients/img1.png"
+                                    alt="DeepKeep"
+                                    loading="lazy" />
+                              </picture>
+                           </div>
+                           <div class="slider-clients__slide slide-clients">
+                              <picture>
+                                 <source srcset="./img/content/main/clients/img7.webp" type="image/webp" />
+                                 <img
+                                    class="slide-clients__image"
+                                    src="./img/content/main/clients/img7.png"
+                                    alt="C4"
+                                    loading="lazy" />
+                              </picture>
+                           </div>
+                           <div class="slider-clients__slide slide-clients">
+                              <picture>
+                                 <source srcset="./img/content/main/clients/img2.webp" type="image/webp" />
+                                 <img
+                                    class="slide-clients__image"
+                                    src="./img/content/main/clients/img2.png"
+                                    alt="magalim"
+                                    loading="lazy" />
+                              </picture>
+                           </div>
+                           <div class="slider-clients__slide slide-clients">
+                              <picture>
+                                 <source srcset="./img/content/main/clients/img3.webp" type="image/webp" />
+                                 <img
+                                    class="slide-clients__image"
+                                    src="./img/content/main/clients/img3.png"
+                                    alt="avarage"
+                                    loading="lazy" />
+                              </picture>
+                           </div>
+                           <div class="slider-clients__slide slide-clients">
+                              <picture>
+                                 <source srcset="./img/content/main/clients/img4.webp" type="image/webp" />
+                                 <img
+                                    class="slide-clients__image"
+                                    src="./img/content/main/clients/img4.png"
+                                    alt="loveme"
+                                    loading="lazy" />
+                              </picture>
+                           </div>
+                           <div class="slider-clients__slide slide-clients">
+                              <picture>
+                                 <source srcset="./img/content/main/clients/img2.webp" type="image/webp" />
+                                 <img
+                                    class="slide-clients__image"
+                                    src="./img/content/main/clients/img2.png"
+                                    alt="magalim"
+                                    loading="lazy" />
+                              </picture>
+                           </div>
+                           <div class="slider-clients__slide slide-clients">
+                              <picture>
+                                 <source srcset="./img/content/main/clients/img5.webp" type="image/webp" />
+                                 <img
+                                    class="slide-clients__image"
+                                    src="./img/content/main/clients/img5.png"
+                                    alt="firstmedia"
+                                    loading="lazy" />
+                              </picture>
+                           </div>
+                           <div class="slider-clients__slide slide-clients">
+                              <picture>
+                                 <source srcset="./img/content/main/clients/img6.webp" type="image/webp" />
+                                 <img
+                                    class="slide-clients__image"
+                                    src="./img/content/main/clients/img6.png"
+                                    alt="hortica"
+                                    loading="lazy" />
+                              </picture>
+                           </div>
+                           <div class="slider-clients__slide slide-clients">
+                              <picture>
+                                 <source srcset="./img/content/main/clients/img5.webp" type="image/webp" />
+                                 <img
+                                    class="slide-clients__image"
+                                    src="./img/content/main/clients/img5.png"
+                                    alt="firstmedia"
+                                    loading="lazy" />
+                              </picture>
+                           </div>
+                           <div class="slider-clients__slide slide-clients">
+                              <picture>
+                                 <source srcset="./img/content/main/clients/img7.webp" type="image/webp" />
+                                 <img
+                                    class="slide-clients__image"
+                                    src="./img/content/main/clients/img7.png"
+                                    alt="C4"
+                                    loading="lazy" />
+                              </picture>
+                           </div>
+                        </div>
+                     </div>
+                     <p class="clients__text main-text">Нам довіряють, адже ми найкращі</p>
+                  </div>
+               </section>
+            </div>
+            <section class="connect">
+               <div class="connect__container">
+                  <div class="connect__inner">
+                     <div class="connect__form form-connect">
+                        <h2 class="form-connect__title">Зв`яжіться з нами</h2>
+                        <form action="#" class="form-connect__body">
+                           <div class="form-connect__fields">
+                              <div class="form-connect__field">
+                                 <label for="full-name-form" class="visually-hidden">Вкажіть повне ім"я</label>
+                                 <input
+                                    type="text"
+                                    id="full-name-form"
+                                    class="form-connect__input"
+                                    required
+                                    aria-label="required" />
+                                 <span class="form-connect__placeholder">ПІБ<sup>*</sup></span>
+                              </div>
+                              <div class="form-connect__field">
+                                 <label for="email-form" class="visually-hidden">Вкажіть електрону пошту</label>
+                                 <input
+                                    type="text"
+                                    id="email-form"
+                                    class="form-connect__input"
+                                     data-required="email"
+                                    required
+                                    aria-label="required" />
+                                 <span class="form-connect__placeholder">Пошта<sup>*</sup></span>
+                              </div>
+                              <div class="form-connect__field">
+                                 <label for="tel-form" class="visually-hidden">Вкажіть номер телефона</label>
+                                 <input
+                                    type="text"
+                                    id="tel-form"
+                                    class="form-connect__input"
+                                    data-required="tel"
+                                    required
+                                    aria-label="required" />
+                                 <span class="form-connect__placeholder">Телефон<sup>*</sup></span>
+                              </div>
+                              <div class="form-connect__field">
+                                 <label for="country-form" class="visually-hidden">Вкажіть країну</label>
+                                 <input
+                                    type="text"
+                                    id="country-form"
+                                    class="form-connect__input"
+                                    required
+                                    aria-label="required" />
+                                 <span class="form-connect__placeholder">Країна<sup>*</sup></span>
+                              </div>
+                              <div class="form-connect__field form-connect__field_textarea">
+                                 <label for="message-form" class="visually-hidden">Вкажіть коментар</label>
+                                 <textarea
+                                    id="message-form"
+                                    class="form-connect__input"
+                                    required
+                                    aria-label="required"></textarea>
+                                 <span class="form-connect__placeholder">Коментар<sup>*</sup></span>
+                              </div>
+                           </div>
+                           <button class="form-connect__submit button button_primary" type="submit">Надіслати</button>
+                        </form>
+                     </div>
+                     <div class="connect__slider slider-connect">
+                        <div class="slider-connect__wrapper">
+                           <article class="slider-connect__slide slide-slider">
+                              <p class="slide-slider__text">
+                                 "Приємно здивований рівнем підтримки, яку отримав від цієї компанії. 
+                                 Вони допомогли реалізувати мою ідею стартапу та забезпечили неоціненну експертну раду. 
+                                 Рекомендую їх всім мріячам про успішний бізнес!"
+                              </p>
+                              <div class="slide-slider__author author-connect">
+                                 <div class="author-connect__image _img">
+                                    <img src="./img/content/main/connect/avatar.png" alt="avatar" />
+                                 </div>
+                                 <h3 class="author-connect__name">Кащенко Олена</h3>
+                                 <div class="author-connect__post">Продакт менеджер</div>
+                              </div>
+                           </article>
+                           <article class="slider-connect__slide slide-slider">
+                              <p class="slide-slider__text">
+                                 "Ця компанія - ідеальний партнер для стартапів. Їхня команда працює над кожним проектом з великим захопленням і професіоналізмом. Без їхньої підтримки мій стартап не досяг б таких висот!"
+                              </p>
+                              <div class="slide-slider__author author-connect">
+                                 <div class="author-connect__image _img">
+                                    <img src="./img/content/main/connect/avatar.png" alt="avatar" />
+                                 </div>
+                                 <h3 class="author-connect__name">Фролов Олександр</h3>
+                                 <div class="author-connect__post">Контент менеджер</div>
+                              </div>
+                           </article>
+                           <article class="slider-connect__slide slide-slider">
+                              <p class="slide-slider__text">
+                                 "Велика подяка цій компанії за їхню інноваційну платформу та надійну мережу зв'язків. Без них я не зміг би знайти інвесторів та залучити необхідні ресурси для розвитку мого стартапу. Вони - справжній ключ до успіху!"
+                              </p>
+                              <div class="slide-slider__author author-connect">
+                                 <div class="author-connect__image _img">
+                                    <img src="./img/content/main/connect/avatar.png" alt="avatar" />
+                                 </div>
+                                 <h3 class="author-connect__name">Міщенко Анатолій</h3>
+                                 <div class="author-connect__post">Маркетолог</div>
+                              </div>
+                           </article>
+                        </div>
+                        <div class="slider-connect__pagination"></div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+         </main>
+         @@include("components/footer.html", { })
+         <!-- @@include("components/modal.html", { }) -->
+      </div>
+      <script type="module" src="./js/app.min.js"></script>
+   </body>
+</html>

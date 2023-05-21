@@ -1,0 +1,40 @@
+// - - - - - - - [buttons] - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 16px;
+  gap: 8px;
+  border-radius: 23px;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: lh(15, 12);
+  text-align: center;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  @media (any-hover: hover) {
+    &:hover {
+      color: #041329;
+      svg {
+        fill: #041329;
+      }
+    }
+  }
+  &_primary {
+    border: 1px solid #ffffff;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #ffffff;
+      }
+    }
+  }
+  &_secondary {
+    border: 1px solid #7df5ca;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #7df5ca;
+      }
+    }
+  }
+}
