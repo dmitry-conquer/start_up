@@ -280,3 +280,52 @@
       }
    }
 }
+// - - - - - - - [security] - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+.secutiry {
+   background-color: $background-lighter-color;
+   &__container {}
+   &__inner {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      @include av('column-gap', 88, 30, $container-max-width, 991.98);
+   }
+   &__image {
+      display: none;
+   }
+   &__content {
+      padding: 60px 0;
+      @media (min-width: ($lg)) {
+         flex: 0 1 545px;
+         padding: 25px 0;
+      }
+   }
+   &__title {
+      margin-bottom: 1em;
+   }
+   &__text {
+      line-height: 1.5;
+      margin-bottom: em(31, 14);
+   }
+   &__list {}
+   &__item {
+      line-height: lh(24, 16);
+      display: flex;
+      align-items: flex-start;
+      gap: 0 32px;
+      @media (max-width: ($sm)) {
+         gap: 0 15px;
+      }
+      &::before {
+        content: '';
+        margin-top: 7px;
+        flex: 0 0 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #fff;
+      }
+      &:not(:last-child) {
+          margin-bottom: 20px;
+      }
+   }
+}
