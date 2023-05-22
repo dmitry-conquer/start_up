@@ -38,9 +38,11 @@ body {
 
 // > === One side container ===
 .left-container {
-  margin: 0;
-  padding: 0 0 0 calc((100% - ($container-max-width * 1px)) / 2 + $container-padding * 1px);
-  max-width: none;
+  @media (min-width: ($lg)) {
+    margin: 0;
+    padding: 0 0 0 calc((100% - ($container-max-width * 1px)) / 2 + $container-padding * 1px);
+    max-width: none;
+  }
 }
 
 .right-container {
