@@ -124,12 +124,46 @@ export function initSliders() {
          loop: true,
          speed: 800,
          autoplay: {
-            delay: 5000
+            delay: 5000,
          },
          pagination: {
-            el: '.slider-connect__pagination',
-            clickable: true
-         }
+            el: ".slider-connect__pagination",
+            clickable: true,
+         },
+      });
+   }
+
+   if (document.querySelector(".consultation__body")) {
+      new Swiper(".consultation__body", {
+         modules: [Navigation],
+         wrapperClass: "consultation__list",
+         slideClass: "consultation__item",
+         slidesPerView: 4,
+         spaceBetween: 35,
+         loop: true,
+         speed: 800,
+         navigation: {
+            prevEl: '.consultation__prev',
+            nextEl: '.consultation__next',
+         },
+         breakpoints: {
+            320: {
+               slidesPerView: 1.2,
+               spaceBetween: 15,
+            },
+            575.98: {
+               slidesPerView: 2.4,
+            },
+            // 768: {
+            //    slidesPerView: 2.4,
+            // },
+            992: {
+               slidesPerView: 3.4,
+            },
+            1200: {
+               slidesPerView: 4,
+            },
+         },
       });
    }
 }
