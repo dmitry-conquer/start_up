@@ -166,4 +166,32 @@ export function initSliders() {
          },
       });
    }
+
+   if (document.querySelector(".todo__body")) {
+      new Swiper(".todo__body", {
+         wrapperClass: "todo__list",
+         slideClass: "todo__item",
+         slidesPerView: 'auto',
+         spaceBetween: 8,
+         speed: 800,
+         // breakpoints: {
+         //    320: {
+         //       slidesPerView: 1.2,
+         //       spaceBetween: 15,
+         //    },
+         //    575.98: {
+         //       slidesPerView: 2.4,
+         //    },
+         //    // 768: {
+         //    //    slidesPerView: 2.4,
+         //    // },
+         //    992: {
+         //       slidesPerView: 3.4,
+         //    },
+         //    1200: {
+         //       slidesPerView: 4,
+         //    },
+         // },
+      });
+   }
 }
