@@ -1,6 +1,5 @@
 $container-layout-width: 1120; // Ширина контейнера по макету
 $container-padding: 15; // Отступы у контейнера (по 15px слева и справа, 0 = нет отступа)
-
 $container-max-width: calc($container-layout-width + ($container-padding * 2));
 
 // header-height
@@ -15,6 +14,8 @@ $lg: 992px;
 $md: 768px;
 $sm: 576px;
 
-
+// colors
+$primary-color: #7df5ca;
 $background-color: #041329;
 $background-light-color: #0F1D31;
+$gray-color: #afafaf; 

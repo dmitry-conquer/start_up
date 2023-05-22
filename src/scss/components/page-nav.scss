@@ -1,0 +1,29 @@
+.page-nav {
+   position: absolute;
+   top: 100px;
+   left: $container-padding + px;
+   &__list {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0 10px;
+      svg {
+         transform: rotate(-90deg) scale(0.9);
+      }
+   }
+   &__item {
+   }
+   &__link {
+      font-weight: 500;
+      line-height: 1;
+      transition: all .3s ease;
+      @media (any-hover: hover) {
+        &:hover {
+          color: $primary-color;
+        }
+      }
+      &_active {
+         color: $gray-color;
+      }
+   }
+}

@@ -15,7 +15,6 @@ function app() {
    initHeader();
    useDynamicAdapt("max");
    initSliders();
-  
    // forms validation
    const connetForm = document.querySelector(".form-connect__body");
    connetForm.addEventListener("submit", e => {

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+   @@include('components/head.html', { 'title': 'Сервіси' })
+   <body>
+      <div class="wrapper">
+         @@include('components/header.html', { })
+         <main>
+            <section class="hero hero_services">
+               <div class="hero__container">
+                  <nav class="hero__page-nav page-nav">
+                     <ul class="page-nav__list">
+                        <li class="page-nav__item">
+                           <a href="index.html" class="page-nav__link">Головна</a>
+                        </li>
+                        <svg class="icon-simple-arrow">
+                           <use href="./sprites/sprite.svg#icon-simple-arrow"></use>
+                        </svg>
+                        <li class="page-nav__item">
+                           <a href="services.html" class="page-nav__link page-nav__link_active">Сервіси</a>
+                        </li>
+                     </ul>
+                  </nav>
+                  <div class="hero__inner hero__inner_services">
+                     <div class="hero__titles">
+                        <h1 class="hero__title">Лідерство в інноваціях - наша головна мета!</h1>
+                        <p class="hero__text">
+                           Ми знаємо, що стартапи є джерелом інновацій та економічного зростання. Тому ми прагнемо
+                           створити екосистему, де молоді підприємства знаходять оптимальні умови для розвитку. Наша
+                           компанія надає не тільки фінансову підтримку, але й навчальні програми, менторство, доступ до
+                           мережі контактів та ресурсів, щоб допомогти стартапам здійснити перевагу на ринку.
+                        </p>
+                     </div>
+                     <div class="hero__services services-hero">
+                        <h2 class="services-hero__title">Ми пропоноємо</h2>
+                        <ul class="services-hero__list">
+                           <li class="services-hero__item main-text">PoC розробка</li>
+                           <li class="services-hero__item main-text">Побудова плану розвитку</li>
+                           <li class="services-hero__item main-text">Фінансові аблігації</li>
+                           <li class="services-hero__item main-text">Пошук команди</li>
+                           <li class="services-hero__item main-text">Допомога в адаптаціях</li>
+                           <li class="services-hero__item main-text">Планування менеджменту</li>
+                           <li class="services-hero__item main-text">Розробка протоколів</li>
+                           <li class="services-hero__item main-text">Розширення можливостей</li>
+                           <li class="services-hero__item main-text">Наслідування канонів</li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </section>
+         </main>
+         @@include('components/footer.html', { })
+      </div>
+      <script type="module" src="./js/app.min.js"></script>
+   </body>
+</html>

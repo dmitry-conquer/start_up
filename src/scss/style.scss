@@ -24,11 +24,13 @@
 /* components-style */
 @import
   "./components/buttons",
+  "./components/page-nav",
   "./components/header",
   "./components/modal",
   "./components/footer";
 
 /* Pages */
 @import
-  "home-page",
-  "404-page";
+"home-page",
+"services-page",
+"404-page";

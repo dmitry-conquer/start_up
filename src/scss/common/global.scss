@@ -30,6 +30,7 @@ body {
 
 // > === Main container styles ===
 [class*="__container"] {
+  position: relative;
   margin: 0 auto;
   padding: 0 $container-padding + px;
   max-width: $container-max-width + px;

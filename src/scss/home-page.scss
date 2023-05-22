@@ -1,10 +1,10 @@
 .hero {
    background: url("../img/content/main/hero/hero-bg.jpg") center / cover no-repeat;
    min-height: 95vh;
-   &__container {
-   }
    &__inner {
-      @include av("padding-top", 336, 100);
+      display: flex;
+      flex-direction: column;
+      @include av("padding-top", 336, 160);
    }
    &__titles {
       max-width: 743px;
@@ -115,7 +115,6 @@
       @include av("padding-bottom", 50, 20);
       @include av("padding-left", 64, 20);
       @include av("padding-right", 64, 20);
-      // display: flex;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       justify-content: space-between;

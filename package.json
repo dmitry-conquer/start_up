@@ -14,7 +14,7 @@
     "lint:fix": "eslint ./src --fix",
     "lint:stylelint": "stylelint \"src/**/*.scss\" --config .stylelintrc",
     "lint:stylelint:fix": "stylelint \"src/**/*.scss\" --config .stylelintrc --fix",
-    "htmlhint": "htmlhint ./dist/*.html"
+    "htmlhint": "htmlhint ./src/**/*.html"
   },
   "author": "Conquer",
   "license": "ISC",
