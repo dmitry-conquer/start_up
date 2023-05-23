@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="uk">
+   @@include('components/head.html', { 'title': 'Пост' })
+
+   <body>
+      <div class="wrapper">
+         @@include('components/header.html', { })
+         <main>
+            <article class="post">
+               <section class="post__hero hero-post">
+                  <div class="hero-post__container">
+                     <nav class="page-nav">
+                        <ul class="page-nav__list">
+                           <li class="page-nav__item">
+                              <a href="index.html" class="page-nav__link">Головна</a>
+                           </li>
+                           <svg class="icon-simple-arrow">
+                              <use href="./sprites/sprite.svg#icon-simple-arrow"></use>
+                           </svg>
+                           <li class="page-nav__item">
+                              <a href="blog.html" class="page-nav__link page-nav__link_active">Блог</a>
+                           </li>
+                           <svg class="icon-simple-arrow">
+                              <use href="./sprites/sprite.svg#icon-simple-arrow"></use>
+                           </svg>
+                           <li class="page-nav__item">
+                              <a href="blog.html" class="page-nav__link page-nav__link_active">Пост</a>
+                           </li>
+                        </ul>
+                     </nav>
+                     <div class="hero-post__content">
+                        <h1 class="hero-post__title">Топ-тренди стартапів</h1>
+                     </div>
+                  </div>
+               </section>
+               <section class="post__body body-post">
+                  <div class="body-post__container">
+                     <h2 class="body-post__title">Інноваційні рішення для майбутнього</h2>
+                     <p class="body-post__text main-text">
+                        Інноваційний підхід: Ми відзначаємо себе інноваційним підходом до стартапів, активно досліджуючи
+                        та впроваджуючи передові технології. Наша команда зосереджена на створенні революційних рішень,
+                        що змінюють гру правил у світі бізнесу. Командна співпраця: У нас високо цінується культура
+                        командної співпраці.
+                     </p>
+                     <h2 class="body-post__title">
+                        Ось кілька трендових напрямків, які привертають увагу в світі стартапів:
+                     </h2>
+                     <ul class="body-post__list">
+                        <li class="body-post__item">Штучний інтелект та машинне навчання</li>
+                        <li class="body-post__item">Blockchain та криптовалюта</li>
+                        <li class="body-post__item">Еко-технології та сталість</li>
+                        <li class="body-post__item">Віртуальна реальність в бізнесі</li>
+                     </ul>
+                     <div class="body-post__image body-post__image_single _imw">
+                        <img
+                           src="./img/content/blog-page/blog-all/img13.webp"
+                           alt="Blockchain та криптовалюта" />
+                     </div>
+                     <h2 class="body-post__title">
+                        Новаторські ідеї та рішення допомагають вирішувати складні проблеми та змінювати наше життя на
+                        краще.
+                     </h2>
+                     <ul class="body-post__list">
+                        <li class="body-post__item">Краудфандинг трансформує фінансовий ландшафт</li>
+                        <li class="body-post__item">Розумні сільськогосподарські технології</li>
+                        <li class="body-post__item">Інтернет речей (IoT) перетворює галузі</li>
+                        <li class="body-post__item">Мобільні фінтех рішення</li>
+                     </ul>
+                     <h2 class="body-post__title">Штучний інтелект та машинне навчання</h2>
+                     <div class="body-post__row">
+                        <div class="body-post__image _imw">
+                           <img
+                              src="./img/content/blog-page/blog-all/img2.webp"
+                              alt="Штучний інтелект та машинне навчання" />
+                        </div>
+                        <p class="body-post__text main-text">
+                           Розвиток штучного інтелекту (AI) та машинного навчання (ML) стає все більш значущим у сфері
+                           стартапів. Підприємства використовують ці технології для автоматизації процесів, покращення
+                           аналітики даних та впровадження інтелектуальних систем у різних галузях, включаючи медицину,
+                           фінанси та електронну комерцію. Ми віддаємо перевагу не лише фінансовій підтримці, але й
+                           активному наставництву. Наші ментори, зі значним досвідом в стартап-екосистемі, діляться
+                           своїми знаннями та ресурсами.
+                        </p>
+                     </div>
+                     <p class="body-post__text main-text">
+                        Зростаюча увага до проблеми зміни клімату спонукає стартапи розробляти технології, спрямовані на
+                        збереження довкілля та досягнення сталого розвитку. Серед таких інновацій можна виділити сонячні
+                        енергетичні системи, вітрові установки, енергоефективні.
+                     </p>
+                     <div class="body-post__date date-post">
+                        <svg class="icon-calendar">
+                           <use href="./sprites/sprite.svg#icon-calendar"></use>
+                        </svg>
+                        <p class="date-post__label">Додано:</p>
+                        <time class="date-post__date">13 квітня 2023</time>
+                     </div>
+                  </div>
+               </section>
+            </article>
+         </main>
+         @@include('components/footer.html', { })
+      </div>
+      <script type="module" src="./js/app.min.js"></script>
+   </body>
+</html>

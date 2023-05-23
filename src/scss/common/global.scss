@@ -78,13 +78,13 @@ h1 {
 h2 {
    font-weight: 600;
    @include av("font-size", 32, 28);
-   line-height: lh(40, 32);
+   line-height: 1.3;
 }
 
 //
 .main-text {
    font-weight: 500;
    font-size: 14px;
-   line-height: 1.4;
+   line-height: 1.5;
    color: #afafaf;
 }
