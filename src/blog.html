@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="uk">
+   @@include('components/head.html', { 'title': 'Блог' })
+
+   <body>
+      <div class="wrapper">
+         @@include('components/header.html', { })
+         <main>
+            <section class="hero hero_blog">
+               <div class="hero__container">
+                  <nav class="hero__page-nav page-nav">
+                     <ul class="page-nav__list">
+                        <li class="page-nav__item">
+                           <a href="index.html" class="page-nav__link">Головна</a>
+                        </li>
+                        <svg class="icon-simple-arrow">
+                           <use href="./sprites/sprite.svg#icon-simple-arrow"></use>
+                        </svg>
+                        <li class="page-nav__item">
+                           <a href="blog.html" class="page-nav__link page-nav__link_active">Блог</a>
+                        </li>
+                     </ul>
+                  </nav>
+                  <div class="hero__inner">
+                     <div class="hero__titles">
+                        <h1 class="hero__title">Блог</h1>
+                        <p class="hero__text">
+                           Ми віримо в постійний прогрес і інновації. Наша компанія постійно оновлюється, впроваджує
+                           нові технології та стратегії, щоб забезпечити найкращі результати для наших стартапів і
+                           забезпечити їхній успіх.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <section class="blog-all">
+               <h2 class="visually-hidden">Повний список записів блогу</h2>
+               <div class="blog-all__container">
+                  <div class="blog-all__control control-blog">
+                     <ul class="control-blog__list">
+                        <li class="control-blog__item">
+                           <a href="#" class="control-blog__link" data-catagory="blog-all">Всі</a>
+                        </li>
+                        <li class="control-blog__item">
+                           <a href="#" class="control-blog__link" data-catagory="blog-interview">Інтерв'ю</a>
+                        </li>
+                        <li class="control-blog__item">
+                           <a href="#" class="control-blog__link" data-catagory="blog-weekend">Щотижневник</a>
+                        </li>
+                        <li class="control-blog__item">
+                           <a href="#" class="control-blog__link" data-catagory="blog-report">Звітник</a>
+                        </li>
+                     </ul>
+                     <div class="control-blog__sort sort-blog">
+                        <span class="sort-blog__label">Сортувати по:</span>
+                        <div class="sort-blog__select">
+                           <select name="blog-sort">
+                              <option value="population" class="sort-blog__option" selected>Популярні</option>
+                              <option value="time" class="sort-blog__option">Дата</option>
+                           </select>
+                           <span class="sort-blog__arrow">
+                              <svg class="icon-simple-arrow">
+                                 <use href="./sprites/sprite.svg#icon-simple-arrow"></use>
+                              </svg>
+                           </span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="blog-all__body">
+                     <article class="blog-all__article article-blog" data-date="2023-02-21" data-cat-content="blog-weekend">
+                        <a href="" class="article-blog__image">
+                           <img src="./img/content/blog-page/blog-all/img1.webp" alt="preview" />
+                        </a>
+                        <div class="article-blog__content">
+                           <h3 class="article-blog__title">Новаторські ідеї</h3>
+                           <p class="article-blog__text main-text">
+                              Як знайти та реалізувати ідеї, що змінять світ стартапів
+                           </p>
+                           <a href="#" class="article-blog__more">Читати...</a>
+                        </div>
+                     </article>
+                     <article class="blog-all__article article-blog" data-date="2022-07-13" data-cat-content="blog-report">
+                        <a href="" class="article-blog__image">
+                           <img src="./img/content/blog-page/blog-all/img2.webp" alt="preview" />
+                        </a>
+                        <div class="article-blog__content">
+                           <h3 class="article-blog__title">Успіх у діловому світі</h3>
+                           <p class="article-blog__text main-text">Секрети успішних стартапів та розвиток бізнесу</p>
+                           <a href="#" class="article-blog__more">Читати...</a>
+                        </div>
+                     </article>
+                     <article class="blog-all__article article-blog" data-date="2022-06-01" data-cat-content="blog-report">
+                        <a href="" class="article-blog__image">
+                           <img src="./img/content/blog-page/blog-all/img3.webp" alt="preview" />
+                        </a>
+                        <div class="article-blog__content">
+                           <h3 class="article-blog__title">Топ-тренди стартапів</h3>
+                           <p class="article-blog__text main-text">
+                              Найбільш актуальні напрямки інновацій та розвитку стартапів.
+                           </p>
+                           <a href="#" class="article-blog__more">Читати...</a>
+                        </div>
+                     </article>
+                     <article class="blog-all__article article-blog" data-date="2022-05-12" data-cat-content="blog-report">
+                        <a href="" class="article-blog__image">
+                           <img src="./img/content/blog-page/blog-all/img12.webp" alt="preview" />
+                        </a>
+                        <div class="article-blog__content">
+                           <h3 class="article-blog__title">Менторство</h3>
+                           <p class="article-blog__text main-text">
+                              Як знайти та співпрацювати з досвідченими менторами.
+                           </p>
+                           <a href="#" class="article-blog__more">Читати...</a>
+                        </div>
+                     </article>
+                     <article class="blog-all__article article-blog" data-date="2022-05-01" data-cat-content="blog-interview">
+                        <a href="" class="article-blog__image">
+                           <img src="./img/content/blog-page/blog-all/img4.webp" alt="preview" />
+                        </a>
+                        <div class="article-blog__content">
+                           <h3 class="article-blog__title">Фінансування стартапів</h3>
+                           <p class="article-blog__text main-text">
+                              Різні джерела фінансування та стратегії залучення інвестицій.
+                           </p>
+                           <a href="#" class="article-blog__more">Читати...</a>
+                        </div>
+                     </article>
+                     <article class="blog-all__article article-blog" data-date="2022-03-22" data-cat-content="blog-interview">
+                        <a href="" class="article-blog__image">
+                           <img src="./img/content/blog-page/blog-all/img5.webp" alt="preview" />
+                        </a>
+                        <div class="article-blog__content">
+                           <h3 class="article-blog__title">Підприємницькі навички</h3>
+                           <p class="article-blog__text main-text">
+                              Розвиток навичок та якостей, необхідних для успіху у стартап-індустрії.
+                           </p>
+                           <a href="#" class="article-blog__more">Читати...</a>
+                        </div>
+                     </article>
+                     <article class="blog-all__article article-blog" data-date="2022-03-11" data-cat-content="blog-report">
+                        <a href="" class="article-blog__image">
+                           <img src="./img/content/blog-page/blog-all/img6.webp" alt="preview" />
+                        </a>
+                        <div class="article-blog__content">
+                           <h3 class="article-blog__title">Стартап-екосистема</h3>
+                           <p class="article-blog__text main-text">
+                              Вплив екосистеми на розвиток стартапів та можливості співпраці.
+                           </p>
+                           <a href="#" class="article-blog__more">Читати...</a>
+                        </div>
+                     </article>
+                     <article class="blog-all__article article-blog" data-date="2022-02-07" data-cat-content="blog-interview">
+                        <a href="" class="article-blog__image">
+                           <img src="./img/content/blog-page/blog-all/img7.webp" alt="preview" />
+                        </a>
+                        <div class="article-blog__content">
+                           <h3 class="article-blog__title">Виклики та перешкоди</h3>
+                           <p class="article-blog__text main-text">
+                              Як подолати виклики та перебороти перешкоди на шляху до успіху.
+                           </p>
+                           <a href="#" class="article-blog__more">Читати...</a>
+                        </div>
+                     </article>
+                     <article class="blog-all__article article-blog" data-date="2021-06-12" data-cat-content="blog-weekend">
+                        <a href="" class="article-blog__image">
+                           <img src="./img/content/blog-page/blog-all/img8.webp" alt="preview" />
+                        </a>
+                        <div class="article-blog__content">
+                           <h3 class="article-blog__title">Технології майбутнього</h3>
+                           <p class="article-blog__text main-text">
+                              Вплив новітніх технологій на розвиток стартапів та їхні можливості.
+                           </p>
+                           <a href="#" class="article-blog__more">Читати...</a>
+                        </div>
+                     </article>
+                     <article class="blog-all__article article-blog" data-date="2021-05-18" data-cat-content="blog-weekend">
+                        <a href="" class="article-blog__image">
+                           <img src="./img/content/blog-page/blog-all/img9.webp" alt="preview" />
+                        </a>
+                        <div class="article-blog__content">
+                           <h3 class="article-blog__title">Стартап-лідери</h3>
+                           <p class="article-blog__text main-text">
+                              Історії успіху найвідоміших стартап-компаній та їхніх засновників.
+                           </p>
+                           <a href="#" class="article-blog__more">Читати...</a>
+                        </div>
+                     </article>
+                     <article class="blog-all__article article-blog" data-date="2021-04-11" data-cat-content="blog-report">
+                        <a href="" class="article-blog__image">
+                           <img src="./img/content/blog-page/blog-all/img10.webp" alt="preview" />
+                        </a>
+                        <div class="article-blog__content">
+                           <h3 class="article-blog__title">Інклюзивність</h3>
+                           <p class="article-blog__text main-text">
+                              Роль різноманітності у стартап-середовищі та значення інклюзивності.
+                           </p>
+                           <a href="#" class="article-blog__more">Читати...</a>
+                        </div>
+                     </article>
+                     <article class="blog-all__article article-blog" data-date="2021-06-01" data-cat-content="blog-interview">
+                        <a href="" class="article-blog__image">
+                           <img src="./img/content/blog-page/blog-all/img11.webp" alt="preview" />
+                        </a>
+                        <div class="article-blog__content">
+                           <h3 class="article-blog__title">Маркетинг та брендування</h3>
+                           <p class="article-blog__text main-text">
+                              Стратегії маркетингу та побудови сильного бренду для стартапів.
+                           </p>
+                           <a href="#" class="article-blog__more">Читати...</a>
+                        </div>
+                     </article>
+                  </div>
+               </div>
+            </section>
+         </main>
+         @@include('components/footer.html', { })
+      </div>
+      <script type="module" src="./js/app.min.js"></script>
+   </body>
+</html>
