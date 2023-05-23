@@ -1,5 +1,5 @@
 .hero {
-   background: url("../img/content/main/hero/hero-bg.jpg") center / cover no-repeat;
+   background: url("../img/content/main/hero/hero-bg.webp") center / cover no-repeat;
    min-height: 95vh;
    &__inner {
       display: flex;
@@ -88,11 +88,11 @@
 .general {
    background-color: $background-color;
    position: relative;
-   background-image: url("../img/decor/general-bg-left.png"), url("../img/decor/general-bg-right.png");
+   background-image: url("../img/decor/general-bg-left.webp"), url("../img/decor/general-bg-right.webp");
    background-repeat: no-repeat;
    background-position: left, right;
    @media (max-width: ($md)) {
-      background-image: url("../img/decor/general-bg-right.png");
+      background-image: url("../img/decor/general-bg-right.webp");
    }
 }
 // - - - - - - - [general-work] - - - - - - - - - - - - - - - - - - - - - - - - - - - -

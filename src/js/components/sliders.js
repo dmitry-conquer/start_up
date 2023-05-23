@@ -174,24 +174,40 @@ export function initSliders() {
          slidesPerView: 'auto',
          spaceBetween: 8,
          speed: 800,
-         // breakpoints: {
-         //    320: {
-         //       slidesPerView: 1.2,
-         //       spaceBetween: 15,
-         //    },
-         //    575.98: {
-         //       slidesPerView: 2.4,
-         //    },
-         //    // 768: {
-         //    //    slidesPerView: 2.4,
-         //    // },
-         //    992: {
-         //       slidesPerView: 3.4,
-         //    },
-         //    1200: {
-         //       slidesPerView: 4,
-         //    },
-         // },
+      });
+   }
+
+   if (document.querySelector(".blog-services__body")) {
+      new Swiper(".blog-services__body", {
+         modules: [Navigation],
+         wrapperClass: "blog-services__list",
+         slideClass: "blog-services__item",
+         slidesPerView: 3,
+         spaceBetween: 16,
+         loop: true,
+         speed: 800,
+         navigation: {
+            prevEl: '.blog-services__prev',
+            nextEl: '.blog-services__next',
+         },
+         breakpoints: {
+            320: {
+               slidesPerView: 1.3,
+               spaceBetween: 15,
+            },
+            470: {
+               slidesPerView: 1.7,
+            },
+            575: {
+               slidesPerView: 2.3,
+            },
+            768: {
+               slidesPerView: 2.5,
+            },
+            992: {
+               slidesPerView: 3,
+            },
+         },
       });
    }
 }
