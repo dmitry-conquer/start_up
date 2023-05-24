@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="uk">
+   @@include('components/head.html', { 'title': "Зв'язок" })
+
+   <body>
+      <div class="wrapper">
+         @@include('components/header.html', { })
+         <main>
+            <h1 class="visually-hidden">Інформація про нас та з'вязок</h1>
+            <section class="connect connect_contacts">
+               <div class="connect__container">
+                  <div class="connect__inner">
+                     <div class="connect__form form-connect">
+                        <h2 class="form-connect__title">Зв`яжіться з нами</h2>
+                        <form action="#" class="form-connect__body">
+                           <div class="form-connect__fields">
+                              <div class="form-connect__field">
+                                 <label for="full-name-form" class="visually-hidden">Вкажіть повне ім"я</label>
+                                 <input
+                                    type="text"
+                                    id="full-name-form"
+                                    class="form-connect__input"
+                                    required
+                                    aria-label="required" />
+                                 <span class="form-connect__placeholder">ПІБ<sup>*</sup></span>
+                              </div>
+                              <div class="form-connect__field">
+                                 <label for="email-form" class="visually-hidden">Вкажіть електрону пошту</label>
+                                 <input
+                                    type="text"
+                                    id="email-form"
+                                    class="form-connect__input"
+                                    data-required="email"
+                                    required
+                                    aria-label="required" />
+                                 <span class="form-connect__placeholder">Пошта<sup>*</sup></span>
+                              </div>
+                              <div class="form-connect__field">
+                                 <label for="tel-form" class="visually-hidden">Вкажіть номер телефона</label>
+                                 <input
+                                    type="text"
+                                    id="tel-form"
+                                    class="form-connect__input"
+                                    data-required="tel"
+                                    required
+                                    aria-label="required" />
+                                 <span class="form-connect__placeholder">Телефон<sup>*</sup></span>
+                              </div>
+                              <div class="form-connect__field">
+                                 <label for="country-form" class="visually-hidden">Вкажіть країну</label>
+                                 <input
+                                    type="text"
+                                    id="country-form"
+                                    class="form-connect__input"
+                                    required
+                                    aria-label="required" />
+                                 <span class="form-connect__placeholder">Країна<sup>*</sup></span>
+                              </div>
+                              <div class="form-connect__field form-connect__field_textarea">
+                                 <label for="message-form" class="visually-hidden">Вкажіть коментар</label>
+                                 <textarea
+                                    id="message-form"
+                                    class="form-connect__input"
+                                    required
+                                    aria-label="required"></textarea>
+                                 <span class="form-connect__placeholder">Коментар<sup>*</sup></span>
+                              </div>
+                           </div>
+                           <button class="form-connect__submit button button_primary" type="submit">Надіслати</button>
+                        </form>
+                     </div>
+                     <div class="connect__image _imw">
+                        <img src="./img/content/blog-page/blog-all/img4.webp" alt="Зв'язок з нами" />
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <section class="map">
+               <h2 class="visually-hidden">Розташування офісів</h2>
+              <div class="map__outer"> 
+               <div class="map__container _imw">
+                                <div class="map__info map__info_ger">
+                                   <div class="map__header">
+                                      <svg class="icon-city">
+                                         <use href="./sprites/sprite.svg#icon-city"></use>
+                                      </svg>
+                                      <h3 class="map__title">Germany</h3>
+                                   </div>
+                                   <address class="map__body">
+                                      <ul class="map__list">
+                                         <li class="map__item">
+                                            <svg class="icon-location">
+                                               <use href="./sprites/sprite.svg#icon-location"></use>
+                                            </svg>
+                                            <p class="map__desc">4517 Washington Ave. Manchester, Kentucky 39495</p>
+                                         </li>
+                                         <li class="map__item">
+                                            <svg class="icon-phone">
+                                               <use href="./sprites/sprite.svg#icon-phone"></use>
+                                            </svg>
+                                            <a href="tel:2095550104" class="map__desc map__desc_tel">(209) 555-0104</a>
+                                         </li>
+                                      </ul>
+                                   </address>
+                                </div>
+                                <div class="map__info map__info_ua">
+                                   <div class="map__header">
+                                      <svg class="icon-city">
+                                         <use href="./sprites/sprite.svg#icon-city"></use>
+                                      </svg>
+                                      <h3 class="map__title">Україна</h3>
+                                   </div>
+                                   <address class="map__body">
+                                      <ul class="map__list">
+                                         <li class="map__item">
+                                            <svg class="icon-location">
+                                               <use href="./sprites/sprite.svg#icon-location"></use>
+                                            </svg>
+                                            <p class="map__desc">м. Одеса, вул. Перемоги 23б, оф. 12</p>
+                                         </li>
+                                         <li class="map__item">
+                                            <svg class="icon-phone">
+                                               <use href="./sprites/sprite.svg#icon-phone"></use>
+                                            </svg>
+                                            <a href="tel:0669550104" class="map__desc map__desc_tel">(066) 955-0104</a>
+                                         </li>
+                                      </ul>
+                                   </address>
+                                </div>
+                             </div></div>
+            </section>
+         </main>
+         @@include('components/footer.html', { })
+      </div>
+      <script type="module" src="./js/app.min.js"></script>
+   </body>
+</html>

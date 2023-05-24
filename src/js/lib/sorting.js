@@ -22,14 +22,13 @@ export const initSorting = () => {
 
    function sorting() {
       const currentValue = this.value;
-      const articlesToSort = sortedArticles?.length > 0 ? sortedArticles : articles;
-      articlesToSort.sort((a, b) => {
+      articles.sort((a, b) => {
          return currentValue == "time"
             ? timeDiff(b.dataset.date) - timeDiff(a.dataset.date)
             : timeDiff(a.dataset.date) - timeDiff(b.dataset.date);
       });
       articlesContainer.innerHTML = "";
-      articlesToSort.forEach(article => {
+      articles.forEach(article => {
          articlesContainer.appendChild(article);
       });
    }
