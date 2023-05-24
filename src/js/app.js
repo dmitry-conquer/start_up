@@ -4,7 +4,7 @@ import { consoleInfo } from "./lib/functions.js";
 import { useDynamicAdapt } from "./lib/dynamicAdapt.js";
 import { hasErrors } from "./lib/forms.js";
 import { initSorting } from "./lib/sorting.js";
-
+import { initSpoiler } from "./lib/spoilers.js";
 import { initHeader } from "./components/header.js";
 import { initSliders } from "./components/sliders.js";
 // > - - - - - - - - [app development] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -16,6 +16,7 @@ function app() {
    initHeader();
    useDynamicAdapt("max");
    initSliders();
+   initSpoiler();
    if (document.querySelector('.control-blog')) {
    initSorting();
    }

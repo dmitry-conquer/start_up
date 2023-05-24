@@ -1832,7 +1832,7 @@
       }
    }
 }
-// - - - - - - - [project-single [description] - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// - - - - - - - [project-single] - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 .description-project {
    @include av("padding-top", 168, 60);
    @include av("padding-bottom", 168, 60);
@@ -1841,8 +1841,8 @@
    &__container {
       display: flex;
       @media (max-width: ($md-s)) {
-            flex-direction: column;
-            gap: 65px 0;
+         flex-direction: column;
+         gap: 65px 0;
       }
       gap: 0 48px;
    }
@@ -1850,12 +1850,12 @@
       overflow: hidden;
       width: 100%;
       @media (min-width: ($md-s)) {
-      flex: 0 1 45%;
+         flex: 0 1 45%;
       }
    }
    &__content {
-   @media (min-width: ($md-s)) {
-      flex: 0 1 55%;
+      @media (min-width: ($md-s)) {
+         flex: 0 1 55%;
       }
    }
    &__title {
@@ -1870,8 +1870,8 @@
    width: 100%;
    margin-bottom: 32px;
    @media (max-width: ($md-s)) {
-   max-width: 80%;
-   margin: 0 auto 32px auto;
+      max-width: 80%;
+      margin: 0 auto 32px auto;
    }
    &__wrapper {
       display: flex;
@@ -1886,9 +1886,9 @@
 .thumbs-swiper-project {
    width: 100%;
    overflow: hidden;
-      @media (max-width: ($md-s)) {
-   max-width: 80%;
-   margin: 0 auto;
+   @media (max-width: ($md-s)) {
+      max-width: 80%;
+      margin: 0 auto;
    }
    &__wrapper {
       display: flex;
@@ -1903,7 +1903,130 @@
       }
    }
 }
-
-
-// - - - - - - - [demo] - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-@import "./demo";
+.accord-project {
+   background-color: $background-light-color;
+   @include av("padding-top", 128, 60);
+   padding-bottom: 60px;
+   &__title {
+      margin-bottom: em(48, 32);
+      &:not(:first-child) {
+         margin-top: em(48, 32);
+      }
+   }
+   &__item {
+      border-left: 2px solid transparent;
+      transition: all 0.3s ease;
+      padding: 0 15px;
+      &:not(:last-child) {
+         margin-bottom: 39px;
+      }
+      &._active-spoiler-parent {
+         border-left: 2px solid $primary-color;
+      }
+   }
+   &__term {
+      font-weight: 500;
+      @include av("font-size", 20, 18);
+      line-height: lh(32, 20);
+      margin-bottom: em(8, 20);
+      display: flex;
+      &_check {
+         gap: 16px;
+         &::before {
+            content: url("../img/decor/check.svg");
+         }
+         @media (min-width: ($sm)) {
+               & + .accord-project__text {
+            padding-left: 36px;
+         } 
+         }
+        
+      }
+      &_dropdown {
+         cursor: pointer;
+         gap: 16px;
+         justify-content: space-between;
+         &::after {
+            content: url("../img/decor/simple-arrow.svg");
+            transition: transform 0.3s ease;
+         }
+         & + .accord-project__text {
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.3s ease;
+         }
+         &._active-spoiler {
+            &::after {
+               transform: rotate(180deg);
+            }
+         }
+      }
+   }
+}
+.review-project {
+   @include av("padding-top", 100, 60);
+   @include av("padding-bottom", 100, 60);
+   background-color: $background-color;
+   &__container {
+   }
+   &__inner {
+      display: flex;
+      align-items: center;
+      gap: 44px;
+      @media (max-width: ($md)) {
+         flex-direction: column;
+         gap: 44px 0;
+      }
+   }
+   &__title {
+      text-align: center;
+      margin-bottom: em(40, 32);
+   }
+   &__content {
+      @include av("padding-left", 20, 0);
+      @include av("padding-right", 20, 0);
+      @media (min-width: ($md)) {
+         flex: 0 1 50%;
+      }
+   }
+   &__text {
+      font-weight: 600;
+      color: #fff;
+      @include av('font-size', 24, 16);
+      margin-bottom: em(33, 14);
+   }
+   &__author {
+      line-height: 0.9;
+   }
+   &__name {
+      font-weight: 600;
+      margin-bottom: em(8, 16);
+   }
+   &__post {
+      font-weight: 500;
+      color: $gray-color;
+   }
+   &__image {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      flex: 0 1 50%;
+      @media (max-width: ($md)) {
+         flex: 0 1 300px;
+         margin-bottom: 30px;
+      }
+   }
+   &__play {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+}
