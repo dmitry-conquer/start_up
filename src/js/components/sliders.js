@@ -1,4 +1,4 @@
-import Swiper, { Navigation, Autoplay, Pagination } from "swiper";
+import Swiper, { Navigation, Autoplay, Pagination, Thumbs } from "swiper";
 
 export function initSliders() {
    if (document.querySelector(".slider-hero")) {
@@ -143,8 +143,8 @@ export function initSliders() {
          loop: true,
          speed: 800,
          navigation: {
-            prevEl: '.consultation__prev',
-            nextEl: '.consultation__next',
+            prevEl: ".consultation__prev",
+            nextEl: ".consultation__next",
          },
          breakpoints: {
             320: {
@@ -171,7 +171,7 @@ export function initSliders() {
       new Swiper(".todo__body", {
          wrapperClass: "todo__list",
          slideClass: "todo__item",
-         slidesPerView: 'auto',
+         slidesPerView: "auto",
          spaceBetween: 8,
          speed: 800,
       });
@@ -187,8 +187,8 @@ export function initSliders() {
          loop: true,
          speed: 800,
          navigation: {
-            prevEl: '.blog-services__prev',
-            nextEl: '.blog-services__next',
+            prevEl: ".blog-services__prev",
+            nextEl: ".blog-services__next",
          },
          breakpoints: {
             320: {
@@ -208,6 +208,48 @@ export function initSliders() {
                slidesPerView: 3,
             },
          },
+      });
+   }
+
+   if (document.querySelector(".slider-project")) {
+      const thumbProjectSlider = new Swiper(".thumbs-swiper-project", {
+         wrapperClass: "thumbs-swiper-project__wrapper",
+         slideClass: "thumbs-swiper-project__slide",
+         slidesPerView: 4,
+         spaceBetween: 16,
+         speed: 800,
+              breakpoints: {
+            320: {
+               slidesPerView: 1.3,
+               spaceBetween: 15,
+            },
+            470: {
+               slidesPerView: 2.4,
+            },
+            575: {
+               slidesPerView: 3.4,
+            },
+            // 768: {
+            //    slidesPerView: 2.5,
+            // },
+            819.98: {
+               slidesPerView: 4,
+            },
+         },
+      });
+      new Swiper(".slider-project", {
+         modules: [Thumbs, Autoplay],
+         autoplay: {
+            delay: 3000,
+         },
+         thumbs: {
+            swiper: thumbProjectSlider,
+         },
+         wrapperClass: "slider-project__wrapper",
+         slideClass: "slider-project__slide",
+         slidesPerView: 1,
+         spaceBetween: 35,
+         speed: 800,
       });
    }
 }

@@ -2,6 +2,7 @@
 @import "../../node_modules/swiper/swiper.scss";
 // @import '../../node_modules/swiper/modules/navigation/navigation.scss';
 @import "../../node_modules/swiper/modules/autoplay/autoplay.scss";
+@import "../../node_modules/swiper/modules/thumbs/thumbs.scss";
 @import "../../node_modules/swiper/modules/pagination/pagination.scss";
 // @import '../../node_modules/aos/src/sass/aos.scss';
 
@@ -79,10 +80,30 @@
 .hero {
    background: url("../img/content/main/hero/hero-bg.webp") center / cover no-repeat;
    min-height: 95vh;
+   &_about {
+      padding-bottom: 50px;
+   }
+   &_projects {
+      padding-bottom: 120px;
+      min-height: auto;
+      background-color: $background-light-color;
+      background-image: url("../img/decor/general-bg-left.webp"), url("../img/decor/general-bg-right.webp");
+      background-repeat: no-repeat;
+      background-position: left 20%, right;
+      background-size: 50%;
+   }
+   &_project {
+      background: url("../img/content/single-project/Bg.webp") center / cover no-repeat;
+   }
    &__inner {
       display: flex;
       flex-direction: column;
       @include av("padding-top", 336, 160);
+      &_projects {
+         display: flex;
+         align-items: center;
+         padding-top: 200px;
+      }
    }
    &__titles {
       max-width: 743px;
@@ -110,7 +131,7 @@
       }
    }
 }
-.slide-hero {
+.hero-item {
    @media (min-width: ($lg)) {
       flex: 0 1 25%;
    }
@@ -161,9 +182,37 @@
       opacity: 0.34;
    }
 }
+.hero {
+   &__list {
+      display: flex;
+      justify-content: space-between;
+      gap: 0 30px;
+      @media (max-width: ($md)) {
+         flex-direction: column;
+         gap: 30px 0;
+         padding: 0 50px;
+      }
+      @media (max-width: ($sm)) {
+         padding: 0;
+      }
+   }
+   &__item {
+      flex-grow: 1;
+      text-align: center;
+   }
+   &__term {
+      font-weight: 700;
+      @include av("font-size", 32, 24);
+      line-height: 1;
+      margin-bottom: em(16, 32);
+   }
+   &__desc {
+   }
+}
+
 // - - - - - - - [general] - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 .general {
-   background-color: $background-color;
+   // background-color: $background-color;
    position: relative;
    background-image: url("../img/decor/general-bg-left.webp"), url("../img/decor/general-bg-right.webp");
    background-repeat: no-repeat;
@@ -338,6 +387,9 @@
 }
 // - - - - - - - [advanteges] - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 .advanteges {
+   background-color: $background-color;
+   position: relative;
+   z-index: -1;
    padding-top: 60px;
    padding-bottom: 70px;
    &__titles {
@@ -859,6 +911,8 @@
 // - - - - - - - [advantages(help)] - - - - - - - - - - - - - - - - - - - - - - - - - -
 .advanteges {
    &_services {
+      position: relative;
+      z-index: -1;
       background-color: $background-color;
    }
 }
@@ -1495,21 +1549,21 @@
    @include av("padding-top", 60, 60);
    padding-bottom: 60px;
 
-    &__outer {
+   &__outer {
       min-height: 300px;
-    background-image: url('../img/content/map/map.webp');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-    }
+      background-image: url("../img/content/map/map.webp");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+   }
    &__container {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 50px;
       @media (max-width: ($sm)) {
-                grid-template-columns: 1fr;
+         grid-template-columns: 1fr;
       }
    }
    &__info {
@@ -1593,4 +1647,263 @@
       }
    }
 }
-// - - - - - - - [] - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// - - - - - - - [vision] - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+.vision {
+   background-image: url("../img/decor/general-bg-left.webp");
+   background-position: left 20%;
+   background-repeat: no-repeat;
+   @include av("padding-top", 104, 60);
+   @include av("padding-bottom", 104, 60);
+   background-color: $background-light-color;
+   &__container {
+      display: flex;
+      align-items: center;
+      gap: 0 40px;
+   }
+   &__content {
+      flex: 0 0 545px;
+   }
+   &__title {
+      margin-bottom: 1em;
+   }
+   &__text {
+   }
+   &__image {
+      border-radius: 16px 0px 0px 16px;
+      overflow: hidden;
+   }
+}
+// - - - - - - - [projects] - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+.projects {
+   padding-top: 60px;
+   @include av("padding-bottom", 80, 60);
+   background-color: $background-color;
+   &__list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+   }
+}
+.item-projects {
+   position: relative;
+   border-radius: 16px;
+   overflow: hidden;
+   background-color: $background-light-color;
+   display: flex;
+   flex-direction: column;
+   transition: all 0.3s ease;
+
+   @media (any-hover: hover) {
+      &:hover {
+         background-color: #386ffd;
+         box-shadow: 0px 12px 26px rgba(56, 111, 253, 0.4);
+         .more-projects {
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), rgba(13, 44, 89, 0.3);
+            @supports ((-webkit-backdrop-filter: blur(4.5px)) or (backdrop-filter: blur(4.5px))) {
+               background: linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+                  rgba(13, 44, 89, 0.3);
+               backdrop-filter: blur(4.5px);
+            }
+         }
+         .more-projects__text {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+         }
+      }
+   }
+   &__image {
+   }
+   &__footer {
+      padding: 16px 24px 21.5px 24px;
+   }
+   &__title {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.2;
+      margin: 0 0 1em 0;
+   }
+   &__text {
+   }
+}
+.more-projects {
+   position: absolute;
+   top: 15px;
+   right: 15px;
+   display: flex;
+   align-items: center;
+   gap: 0 10px;
+   padding: 10px 20px;
+   border-radius: 8px;
+   @media (any-hover: none) {
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), rgba(13, 44, 89, 0.3);
+      @supports ((-webkit-backdrop-filter: blur(4.5px)) or (backdrop-filter: blur(4.5px))) {
+         background: linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), rgba(13, 44, 89, 0.3);
+         backdrop-filter: blur(4.5px);
+      }
+   }
+   &__text {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 0.9;
+      transition: all 0.3s ease;
+      @media (any-hover: hover) {
+         opacity: 0;
+         visibility: hidden;
+         transform: translateX(-20px);
+      }
+   }
+   &__button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+         width: 30px;
+         height: 30px;
+         stroke: none;
+         fill: #fff;
+      }
+   }
+}
+.pagination {
+   max-width: 455px;
+   margin: 48px auto 0 auto;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   @include av("column-gap", 40, 20);
+   &__button {
+      flex: 0 0 45px;
+      height: 45px;
+      border: 1px solid $gray-color;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      svg {
+         transition: all 0.3s ease;
+         width: 14px;
+         height: 14px;
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            border: 1px solid #fff;
+            svg {
+               stroke: $primary-color;
+            }
+         }
+      }
+      &_prev {
+         padding-right: 3px;
+         svg {
+            transform: rotate(90deg);
+         }
+      }
+      &_next {
+         padding-left: 3px;
+         svg {
+            transform: rotate(-90deg);
+         }
+      }
+   }
+   &__list {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+   &__item {
+   }
+   &__link {
+      padding: 5px;
+      font-weight: 800;
+      font-size: 13px;
+      line-height: lh(16, 13);
+      color: $gray-color;
+      transition: all 0.3s ease;
+      &_active {
+         color: $primary-color;
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            color: $primary-color;
+         }
+      }
+   }
+}
+// - - - - - - - [project-single [description] - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+.description-project {
+   @include av("padding-top", 168, 60);
+   @include av("padding-bottom", 168, 60);
+   background-color: $background-color;
+
+   &__container {
+      display: flex;
+      @media (max-width: ($md-s)) {
+            flex-direction: column;
+            gap: 65px 0;
+      }
+      gap: 0 48px;
+   }
+   &__sliders {
+      overflow: hidden;
+      width: 100%;
+      @media (min-width: ($md-s)) {
+      flex: 0 1 45%;
+      }
+   }
+   &__content {
+   @media (min-width: ($md-s)) {
+      flex: 0 1 55%;
+      }
+   }
+   &__title {
+      margin-bottom: 1em;
+   }
+   &__text {
+      line-height: 1.8;
+   }
+}
+.slider-project {
+   overflow: hidden;
+   width: 100%;
+   margin-bottom: 32px;
+   @media (max-width: ($md-s)) {
+   max-width: 80%;
+   margin: 0 auto 32px auto;
+   }
+   &__wrapper {
+      display: flex;
+   }
+   &__slide {
+      overflow: hidden;
+      border-radius: 8px;
+      background-color: $background-color;
+      flex-shrink: 0;
+   }
+}
+.thumbs-swiper-project {
+   width: 100%;
+   overflow: hidden;
+      @media (max-width: ($md-s)) {
+   max-width: 80%;
+   margin: 0 auto;
+   }
+   &__wrapper {
+      display: flex;
+   }
+   &__slide {
+      border-radius: 8px;
+      background-color: $background-color;
+      overflow: hidden;
+      flex-shrink: 0;
+      &.swiper-slide-thumb-active {
+         border: 3px solid $primary-color;
+      }
+   }
+}
+
+
+// - - - - - - - [demo] - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+@import "./demo";

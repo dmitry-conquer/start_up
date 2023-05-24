@@ -16,7 +16,9 @@ function app() {
    initHeader();
    useDynamicAdapt("max");
    initSliders();
+   if (document.querySelector('.control-blog')) {
    initSorting();
+   }
    // forms validation
    const connetForm = document.querySelector(".form-connect__body");
    if (connetForm) {
