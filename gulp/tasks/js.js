@@ -1,5 +1,5 @@
 import webpack from "webpack-stream";
-import ESLintPlugin from 'eslint-webpack-plugin';
+// import ESLintPlugin from 'eslint-webpack-plugin';
 
 export const js = () => {
   return app.gulp
@@ -12,14 +12,14 @@ export const js = () => {
         },
 
 
-        plugins: [
-          new ESLintPlugin({
-            emitError: true,
-            emitWarning: true,
-            failOnError: true,
-            failOnWarning: false,
-          }),
-        ],
+        // plugins: [
+        //   new ESLintPlugin({
+        //     emitError: true,
+        //     emitWarning: true,
+        //     failOnError: true,
+        //     failOnWarning: false,
+        //   }),
+        // ],
         
       })
     )

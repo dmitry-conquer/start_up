@@ -7,6 +7,8 @@ import { initSorting } from "./lib/sorting.js";
 import { initSpoiler } from "./lib/spoilers.js";
 import { initHeader } from "./components/header.js";
 import { initSliders } from "./components/sliders.js";
+import fslightbox from "fslightbox";
+import AOS from 'aos';
 // > - - - - - - - - [app development] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 document.addEventListener("DOMContentLoaded", app);
 
@@ -17,8 +19,11 @@ function app() {
    useDynamicAdapt("max");
    initSliders();
    initSpoiler();
-   if (document.querySelector('.control-blog')) {
-   initSorting();
+   AOS.init({
+      once: true, 
+   });
+   if (document.querySelector(".control-blog")) {
+      initSorting();
    }
    // forms validation
    const connetForm = document.querySelector(".form-connect__body");

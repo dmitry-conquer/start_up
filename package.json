@@ -14,7 +14,7 @@
     "lint:fix": "eslint ./src --fix",
     "lint:stylelint": "stylelint \"src/**/*.scss\" --config .stylelintrc",
     "lint:stylelint:fix": "stylelint \"src/**/*.scss\" --config .stylelintrc --fix",
-    "htmlhint": "htmlhint ./src/**/*.html"
+    "htmlhint": "htmlhint ./dist/*.html"
   },
   "author": "Conquer",
   "license": "ISC",
@@ -67,6 +67,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "eslint-webpack-plugin": "^4.0.1"
   }
 }

@@ -4,7 +4,7 @@
 @import "../../node_modules/swiper/modules/autoplay/autoplay.scss";
 @import "../../node_modules/swiper/modules/thumbs/thumbs.scss";
 @import "../../node_modules/swiper/modules/pagination/pagination.scss";
-// @import '../../node_modules/aos/src/sass/aos.scss';
+@import '../../node_modules/aos/src/sass/aos.scss';
 
 /* Config files */
 /* prettier-ignore */
@@ -223,6 +223,7 @@
 }
 // - - - - - - - [general-work] - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 .work {
+   background-color: $background-color;
    @include av("padding-top", 144, 60);
    padding-bottom: 60px;
    &__container {
@@ -235,6 +236,8 @@
 }
 // - - - - - - - [general-quize] - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 .quize {
+   background-color: $background-light-color;
+   padding: 60px 0;
    &__inner {
       padding: 50px 64px;
       @include av("padding-top", 50, 35);
@@ -389,7 +392,7 @@
 .advanteges {
    background-color: $background-color;
    position: relative;
-   z-index: -1;
+   // z-index: -1;
    padding-top: 60px;
    padding-bottom: 70px;
    &__titles {
@@ -436,6 +439,7 @@
 }
 // - - - - - - - [clients] - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 .clients {
+   background-color: $background-color;
    padding: 48px 0px 72px 0px;
    &__title {
       margin-bottom: em(24, 32);
@@ -583,8 +587,9 @@
    &__pagination {
       margin-top: 30px;
       .swiper-pagination-bullet {
+         background-color: $gray-color;
          &.swiper-pagination-bullet-active {
-            background-color: #fff;
+            background-color: $primary-color;
          }
       }
    }
@@ -912,7 +917,7 @@
 .advanteges {
    &_services {
       position: relative;
-      z-index: -1;
+      // z-index: -1;
       background-color: $background-color;
    }
 }
@@ -1107,6 +1112,7 @@
 }
 // - - - - - - - [security] - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 .secutiry {
+   padding: 60px 0;
    background-color: $background-lighter-color;
    &__container {
    }
@@ -1117,7 +1123,9 @@
       @include av("column-gap", 88, 30, $container-max-width, 991.98);
    }
    &__image {
+      @media (max-width: ($lg)) {
       display: none;
+      }
    }
    &__content {
       padding: 60px 0;
@@ -1168,15 +1176,9 @@
       justify-content: space-between;
       align-items: center;
    }
-   &__title {
-   }
    &__control {
       display: flex;
       gap: 15px;
-   }
-   &__prev {
-   }
-   &__next {
    }
    &__body {
       width: 100%;
@@ -1203,6 +1205,15 @@
    }
    &__image {
       flex: 0 0 248px;
+      overflow: hidden;
+      img {
+         transition: all .3s ease;
+         @media (any-hover: hover) 
+         {  &:hover {
+         transform: scale(1.02);
+         }
+         }
+      }
    }
    &__title {
       font-weight: 600;
@@ -1834,12 +1845,13 @@
 }
 // - - - - - - - [project-single] - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 .description-project {
-   @include av("padding-top", 168, 60);
-   @include av("padding-bottom", 168, 60);
+   padding-top: 60px;
+   padding-bottom: 60px;
    background-color: $background-color;
 
    &__container {
       display: flex;
+      align-items: center;
       @media (max-width: ($md-s)) {
          flex-direction: column;
          gap: 65px 0;

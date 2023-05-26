@@ -161,7 +161,7 @@
 	transition: color 0.3s ease;
 	@media (any-hover: hover) {
 		&:hover {
-			color: #7df5ca;
+			// color: #7df5ca;
 			.item-header__border-bottom {
 				span {
 					visibility: visible;

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="uk">
-   @@include('components/head.html', { 'title': 'проєкт' })
+   @@include('components/head.html', { 'title': 'Porat - Проєкт' })
 
    <body>
       <div class="wrapper">
@@ -9,6 +9,25 @@
             <article class="project">
                <section class="project__hero project-hero hero hero_project">
                   <div class="project-hero__container hero__container">
+                     <nav class="hero__page-nav page-nav">
+                        <ul class="page-nav__list">
+                           <li class="page-nav__item">
+                              <a href="index.html" class="page-nav__link">Головна</a>
+                           </li>
+                           <svg class="icon-simple-arrow">
+                              <use href="./sprites/sprite.svg#icon-simple-arrow"></use>
+                           </svg>
+                           <li class="page-nav__item">
+                              <a href="projects.html" class="page-nav__link page-nav__link_active">Проєкти</a>
+                           </li>
+                              <svg class="icon-simple-arrow">
+                              <use href="./sprites/sprite.svg#icon-simple-arrow"></use>
+                           </svg>
+                           <li class="page-nav__item">
+                              <a href="single-project.html" class="page-nav__link page-nav__link_active">TechGuru</a>
+                           </li>
+                        </ul>
+                     </nav>
                      <div class="project-hero__inner hero__inner">
                         <div class="project-hero__titles hero__titles">
                            <h1 class="project-hero__title hero__title">TechGuru</h1>
@@ -206,8 +225,8 @@
                      <div class="review-project__inner">
                         <div class="review-project__content">
                            <p class="review-project__text main-text">
-                                 Ми знаємо, що стартапи є джерелом інновацій та економічного зростання. Тому ми прагнемо
-                                 створити екосистему, де молоді підприємства знаходять оптимальні умови для розвитку.
+                              Ми знаємо, що стартапи є джерелом інновацій та економічного зростання. Тому ми прагнемо
+                              створити екосистему, де молоді підприємства знаходять оптимальні умови для розвитку.
                            </p>
                            <div class="review-project__author">
                               <p class="review-project__name">Сергій Варенеченко</p>
@@ -225,118 +244,120 @@
                      </div>
                   </div>
                </section>
-                <section class="connect">
-               <div class="connect__container">
-                  <div class="connect__inner">
-                     <div class="connect__form form-connect">
-                        <h2 class="form-connect__title">Зв`яжіться з нами</h2>
-                        <form action="#" class="form-connect__body">
-                           <div class="form-connect__fields">
-                              <div class="form-connect__field">
-                                 <label for="full-name-form" class="visually-hidden">Вкажіть повне ім"я</label>
-                                 <input
-                                    type="text"
-                                    id="full-name-form"
-                                    class="form-connect__input"
-                                    required
-                                    aria-label="required" />
-                                 <span class="form-connect__placeholder">ПІБ<sup>*</sup></span>
-                              </div>
-                              <div class="form-connect__field">
-                                 <label for="email-form" class="visually-hidden">Вкажіть електрону пошту</label>
-                                 <input
-                                    type="text"
-                                    id="email-form"
-                                    class="form-connect__input"
-                                    data-required="email"
-                                    required
-                                    aria-label="required" />
-                                 <span class="form-connect__placeholder">Пошта<sup>*</sup></span>
-                              </div>
-                              <div class="form-connect__field">
-                                 <label for="tel-form" class="visually-hidden">Вкажіть номер телефона</label>
-                                 <input
-                                    type="text"
-                                    id="tel-form"
-                                    class="form-connect__input"
-                                    data-required="tel"
-                                    required
-                                    aria-label="required" />
-                                 <span class="form-connect__placeholder">Телефон<sup>*</sup></span>
-                              </div>
-                              <div class="form-connect__field">
-                                 <label for="country-form" class="visually-hidden">Вкажіть країну</label>
-                                 <input
-                                    type="text"
-                                    id="country-form"
-                                    class="form-connect__input"
-                                    required
-                                    aria-label="required" />
-                                 <span class="form-connect__placeholder">Країна<sup>*</sup></span>
-                              </div>
-                              <div class="form-connect__field form-connect__field_textarea">
-                                 <label for="message-form" class="visually-hidden">Вкажіть коментар</label>
-                                 <textarea
-                                    id="message-form"
-                                    class="form-connect__input"
-                                    required
-                                    aria-label="required"></textarea>
-                                 <span class="form-connect__placeholder">Коментар<sup>*</sup></span>
-                              </div>
-                           </div>
-                           <button class="form-connect__submit button button_primary" type="submit">Надіслати</button>
-                        </form>
-                     </div>
-                     <div class="connect__slider slider-connect">
-                        <div class="slider-connect__wrapper">
-                           <article class="slider-connect__slide slide-slider">
-                              <p class="slide-slider__text">
-                                 "Приємно здивований рівнем підтримки, яку отримав від цієї компанії. Вони допомогли
-                                 реалізувати мою ідею стартапу та забезпечили неоціненну експертну раду. Рекомендую їх
-                                 всім мріячам про успішний бізнес!"
-                              </p>
-                              <div class="slide-slider__author author-connect">
-                                 <div class="author-connect__image _img">
-                                    <img src="./img/content/main/connect/avatar.webp" alt="avatar" />
+               <section class="connect">
+                  <div class="connect__container">
+                     <div class="connect__inner">
+                        <div class="connect__form form-connect">
+                           <h2 class="form-connect__title">Зв`яжіться з нами</h2>
+                           <form action="#" class="form-connect__body">
+                              <div class="form-connect__fields">
+                                 <div class="form-connect__field">
+                                    <label for="full-name-form" class="visually-hidden">Вкажіть повне ім"я</label>
+                                    <input
+                                       type="text"
+                                       id="full-name-form"
+                                       class="form-connect__input"
+                                       required
+                                       aria-label="required" />
+                                    <span class="form-connect__placeholder">ПІБ<sup>*</sup></span>
                                  </div>
-                                 <h3 class="author-connect__name">Кащенко Олена</h3>
-                                 <div class="author-connect__post">Продакт менеджер</div>
-                              </div>
-                           </article>
-                           <article class="slider-connect__slide slide-slider">
-                              <p class="slide-slider__text">
-                                 "Ця компанія - ідеальний партнер для стартапів. Їхня команда працює над кожним проектом
-                                 з великим захопленням і професіоналізмом. Без їхньої підтримки мій стартап не досяг б
-                                 таких висот!"
-                              </p>
-                              <div class="slide-slider__author author-connect">
-                                 <div class="author-connect__image _img">
-                                    <img src="./img/content/main/connect/avatar.webp" alt="avatar" />
+                                 <div class="form-connect__field">
+                                    <label for="email-form" class="visually-hidden">Вкажіть електрону пошту</label>
+                                    <input
+                                       type="text"
+                                       id="email-form"
+                                       class="form-connect__input"
+                                       data-required="email"
+                                       required
+                                       aria-label="required" />
+                                    <span class="form-connect__placeholder">Пошта<sup>*</sup></span>
                                  </div>
-                                 <h3 class="author-connect__name">Фролов Олександр</h3>
-                                 <div class="author-connect__post">Контент менеджер</div>
-                              </div>
-                           </article>
-                           <article class="slider-connect__slide slide-slider">
-                              <p class="slide-slider__text">
-                                 "Велика подяка цій компанії за їхню інноваційну платформу та надійну мережу зв'язків.
-                                 Без них я не зміг би знайти інвесторів та залучити необхідні ресурси для розвитку мого
-                                 стартапу. Вони - справжній ключ до успіху!"
-                              </p>
-                              <div class="slide-slider__author author-connect">
-                                 <div class="author-connect__image _img">
-                                    <img src="./img/content/main/connect/avatar.webp" alt="avatar" />
+                                 <div class="form-connect__field">
+                                    <label for="tel-form" class="visually-hidden">Вкажіть номер телефона</label>
+                                    <input
+                                       type="text"
+                                       id="tel-form"
+                                       class="form-connect__input"
+                                       data-required="tel"
+                                       required
+                                       aria-label="required" />
+                                    <span class="form-connect__placeholder">Телефон<sup>*</sup></span>
                                  </div>
-                                 <h3 class="author-connect__name">Міщенко Анатолій</h3>
-                                 <div class="author-connect__post">Маркетолог</div>
+                                 <div class="form-connect__field">
+                                    <label for="country-form" class="visually-hidden">Вкажіть країну</label>
+                                    <input
+                                       type="text"
+                                       id="country-form"
+                                       class="form-connect__input"
+                                       required
+                                       aria-label="required" />
+                                    <span class="form-connect__placeholder">Країна<sup>*</sup></span>
+                                 </div>
+                                 <div class="form-connect__field form-connect__field_textarea">
+                                    <label for="message-form" class="visually-hidden">Вкажіть коментар</label>
+                                    <textarea
+                                       id="message-form"
+                                       class="form-connect__input"
+                                       required
+                                       aria-label="required"></textarea>
+                                    <span class="form-connect__placeholder">Коментар<sup>*</sup></span>
+                                 </div>
                               </div>
-                           </article>
+                              <button class="form-connect__submit button button_primary" type="submit">
+                                 Надіслати
+                              </button>
+                           </form>
                         </div>
-                        <div class="slider-connect__pagination"></div>
+                        <div class="connect__slider slider-connect">
+                           <div class="slider-connect__wrapper">
+                              <article class="slider-connect__slide slide-slider">
+                                 <p class="slide-slider__text">
+                                    "Приємно здивований рівнем підтримки, яку отримав від цієї компанії. Вони допомогли
+                                    реалізувати мою ідею стартапу та забезпечили неоціненну експертну раду. Рекомендую
+                                    їх всім мріячам про успішний бізнес!"
+                                 </p>
+                                 <div class="slide-slider__author author-connect">
+                                    <div class="author-connect__image _img">
+                                       <img src="./img/content/main/connect/avatar.webp" alt="avatar" />
+                                    </div>
+                                    <h3 class="author-connect__name">Кащенко Олена</h3>
+                                    <div class="author-connect__post">Продакт менеджер</div>
+                                 </div>
+                              </article>
+                              <article class="slider-connect__slide slide-slider">
+                                 <p class="slide-slider__text">
+                                    "Ця компанія - ідеальний партнер для стартапів. Їхня команда працює над кожним
+                                    проектом з великим захопленням і професіоналізмом. Без їхньої підтримки мій стартап
+                                    не досяг б таких висот!"
+                                 </p>
+                                 <div class="slide-slider__author author-connect">
+                                    <div class="author-connect__image _img">
+                                       <img src="./img/content/main/connect/avatar.webp" alt="avatar" />
+                                    </div>
+                                    <h3 class="author-connect__name">Фролов Олександр</h3>
+                                    <div class="author-connect__post">Контент менеджер</div>
+                                 </div>
+                              </article>
+                              <article class="slider-connect__slide slide-slider">
+                                 <p class="slide-slider__text">
+                                    "Велика подяка цій компанії за їхню інноваційну платформу та надійну мережу
+                                    зв'язків. Без них я не зміг би знайти інвесторів та залучити необхідні ресурси для
+                                    розвитку мого стартапу. Вони - справжній ключ до успіху!"
+                                 </p>
+                                 <div class="slide-slider__author author-connect">
+                                    <div class="author-connect__image _img">
+                                       <img src="./img/content/main/connect/avatar.webp" alt="avatar" />
+                                    </div>
+                                    <h3 class="author-connect__name">Міщенко Анатолій</h3>
+                                    <div class="author-connect__post">Маркетолог</div>
+                                 </div>
+                              </article>
+                           </div>
+                           <div class="slider-connect__pagination"></div>
+                        </div>
                      </div>
                   </div>
-               </div>
-            </section>
+               </section>
             </article>
          </main>
          @@include('components/footer.html', { })

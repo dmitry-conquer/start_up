@@ -24,7 +24,6 @@ import { img } from "./gulp/tasks/img.js";
 import { spritesGen } from "./gulp/tasks/sprites-gen.js";
 import { spritesToDist } from "./gulp/tasks/spritesToDist.js";
 import { fonts } from "./gulp/tasks/fonts.js";
-import { json } from "./gulp/tasks/json.js";
 import { zip } from "./gulp/tasks/zip.js";
 import { ftp } from "./gulp/tasks/ftp.js";
 

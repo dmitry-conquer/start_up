@@ -9,22 +9,22 @@ export const html = () => {
       .pipe(fileinclude())
       
       // Prevents site caching. Comment out in production mode
-      // .pipe(
-      //   app.plugins.if(
-      //     app.isBuild,
-      //     versionNumber({
-      //       value: '%DT%',
-      //       append: {
-      //         key: '_v',
-      //         cover: 0,
-      //         to: ['css', 'js', 'img'],
-      //       },
-      //       output: {
-      //         file: 'gulp/version.json',
-      //       },
-      //     })
-      //   )
-      // )
+      .pipe(
+        app.plugins.if(
+          app.isBuild,
+          versionNumber({
+            value: '%DT%',
+            append: {
+              key: '_v',
+              cover: 0,
+              to: ['css', 'js', 'img'],
+            },
+            output: {
+              file: 'gulp/version.json',
+            },
+          })
+        )
+      )
 
       .pipe(
         app.plugins.if(
